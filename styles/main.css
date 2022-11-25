@@ -173,6 +173,7 @@ a:where(:hover, :focus, :focus-visible) {
   --btn-hover-opacity: 1;
 
   --btn-padding: var(--size-300) var(--size-600);
+  --btn-border-width: thin;
 
   display: inline-flex;
   align-items: center;
@@ -180,24 +181,25 @@ a:where(:hover, :focus, :focus-visible) {
   gap: var(--size-200);
   color: var(--btn-clr);
   background-color: var(--btn-bg-clr);
-  border: thin solid var(--btn-border-clr);
+  border: var(--btn-border-width) solid var(--btn-border-clr);
   padding: var(--btn-padding);
   transition: all 0.3s ease-in-out;
   border-radius: var(--size-200);
 }
 
-.btn path {
+.btn :where(svg, path) {
   fill: var(--btn-clr);
+  transition: all 0.3s ease-in-out;
 }
 
 .btn:where(:hover, :focus, :focus-visible) {
   color: var(--btn-hover-clr);
   background-color: var(--btn-hover-bg-clr);
-  border: thin solid var(--btn-hover-border-clr);
+  border: var(--btn-border-width) solid var(--btn-hover-border-clr);
   opacity: var(--btn-hover-opacity);
 }
 
-.btn:where(:hover, :focus, :focus-visible) path {
+.btn:where(:hover, :focus, :focus-visible) :where(svg, path) {
   fill: var(--btn-hover-clr);
 }
 
@@ -266,13 +268,19 @@ a:where(:hover, :focus, :focus-visible) {
 }
 
 .btn-transparent {
-  --btn-clr: var(--clr-gray-900);
   --btn-bg-clr: transparent;
-  --btn-border-clr: transparent;
 
-  --btn-hover-clr: var(--clr-gray-900);
   --btn-hover-bg-clr: transparent;
-  --btn-hover-border-clr: transparent;
+
+  --btn-border-width: 15px;
+}
+
+.btn-one {
+  --btn-clr: red;
+  --btn-border-clr: red;
+
+  --btn-hover-clr: darkred;
+  --btn-hover-border-clr: darkred;
 }
 
 /** Content - Layout **/
