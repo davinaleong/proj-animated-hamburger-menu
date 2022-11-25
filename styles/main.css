@@ -283,6 +283,28 @@ a:where(:hover, :focus, :focus-visible) {
   --btn-hover-border-clr: darkred;
 }
 
+.btn-one .line {
+  transition: 1s;
+  transform-origin: center;
+}
+
+.btn-one:hover .line__top {
+  y: 45;
+  transform: rotate(45deg);
+}
+
+.btn-one:hover .line__middle {
+  transform: rotate(45deg);
+}
+
+.btn-one:hover .line__bottom {
+  y: 45;
+  transform: rotate(-45deg);
+}
+
+.btn-one[aria-expanded="true"] .line__top {
+}
+
 /** Content - Layout **/
 .buttons-grid {
   display: grid;
