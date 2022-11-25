@@ -319,6 +319,52 @@ a:where(:hover, :focus, :focus-visible) {
   --btn-hover-border-clr: var(--clr-secondary-300);
 }
 
+.btn-two .line {
+  animation: to-open-icon 1s forwards;
+}
+
+.btn-two:where(:hover) .line {
+  animation: to-close-icon 1s forwards;
+}
+
+.btn-two .line__top {
+  --line-rotation: 45deg;
+}
+
+.btn-two .line__bottom {
+  --line-rotation: -45deg;
+}
+
+@keyframes to-close-icon {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  40% {
+    stroke-dashoffset: 79.9;
+  }
+
+  60% {
+    stroke-dashoffset: 0;
+    rotate: var(--line-rotation);
+  }
+
+  100% {
+    stroke-dashoffset: 79.9;
+    rotate: var(--line-rotation);
+  }
+}
+
+@keyframes to-open-icon {
+  0% {
+    stroke-dashoffset: 79.9;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
 /** Content - Layout **/
 .buttons-grid {
   display: grid;
