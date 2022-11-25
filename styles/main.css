@@ -22,7 +22,10 @@
 /** Root **/
 :root {
   --clr-primary-400: hsl(48, 18%, 83%);
+  --clr-primary-800: hsl(48, 18%, 23%);
+  --clr-primary-900: hsl(48, 18%, 13%);
 
+  --clr-secondary-300: hsl(120, 20%, 27%);
   --clr-secondary-400: hsl(120, 20%, 17%);
 
   --clr-gray-50: hsl(0, 0%, 100%);
@@ -187,9 +190,10 @@ a:where(:hover, :focus, :focus-visible) {
   border-radius: var(--size-200);
 }
 
-.btn :where(svg, path) {
+.btn :where(svg, path, line) {
   fill: var(--btn-clr);
-  transition: all 0.3s ease-in-out;
+  stroke: var(--btn-clr);
+  transition: 0.3s ease-in-out, stroke 0.1s ease-in-out;
 }
 
 .btn:where(:hover, :focus, :focus-visible) {
@@ -199,8 +203,9 @@ a:where(:hover, :focus, :focus-visible) {
   opacity: var(--btn-hover-opacity);
 }
 
-.btn:where(:hover, :focus, :focus-visible) :where(svg, path) {
+.btn:where(:hover, :focus, :focus-visible) :where(svg, path, line) {
   fill: var(--btn-hover-clr);
+  stroke: var(--btn-hover-clr);
 }
 
 .btn-full {
@@ -208,11 +213,11 @@ a:where(:hover, :focus, :focus-visible) {
 }
 
 .btn-primary {
-  --btn-bg-clr: var(--clr-primary-400);
-  --btn-border-clr: var(--clr-primary-400);
+  --btn-bg-clr: var(--clr-primary-900);
+  --btn-border-clr: var(--clr-primary-900);
 
-  --btn-hover-bg-clr: var(--clr-primary-300);
-  --btn-hover-border-clr: var(--clr-primary-300);
+  --btn-hover-bg-clr: var(--clr-primary-800);
+  --btn-hover-border-clr: var(--clr-primary-800);
 
   font-weight: var(--fw-bold);
 }
@@ -276,11 +281,11 @@ a:where(:hover, :focus, :focus-visible) {
 }
 
 .btn-one {
-  --btn-clr: var(--clr-gray-900);
-  --btn-border-clr: var(--clr-gray-900);
+  --btn-clr: var(--clr-primary-900);
+  --btn-border-clr: var(--clr-primary-900);
 
-  --btn-hover-clr: var(--clr-gray-700);
-  --btn-hover-border-clr: var(--clr-gray-700);
+  --btn-hover-clr: var(--clr-primary-800);
+  --btn-hover-border-clr: var(--clr-primary-800);
 }
 
 .btn-one .line {
@@ -306,7 +311,12 @@ a:where(:hover, :focus, :focus-visible) {
   rotate: -45deg;
 }
 
-.btn-one[aria-expanded="true"] .line__top {
+.btn-two {
+  --btn-clr: var(--clr-secondary-400);
+  --btn-border-clr: var(--clr-secondary-400);
+
+  --btn-hover-clr: var(--clr-secondary-300);
+  --btn-hover-border-clr: var(--clr-secondary-300);
 }
 
 /** Content - Layout **/
