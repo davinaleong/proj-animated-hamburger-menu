@@ -328,11 +328,13 @@ a:where(:hover, :focus, :focus-visible) {
 }
 
 .btn-two .line__top {
-  --line-rotation: 45deg;
+  --line-rotation: -45deg;
+  transform-origin: 65px 45px;
 }
 
 .btn-two .line__bottom {
-  --line-rotation: -45deg;
+  --line-rotation: 45deg;
+  transform-origin: 60px 55px;
 }
 
 @keyframes to-close-icon {
@@ -345,24 +347,61 @@ a:where(:hover, :focus, :focus-visible) {
   }
 
   60% {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 79.9;
     rotate: var(--line-rotation);
   }
 
   100% {
-    stroke-dashoffset: 79.9;
+    stroke-dashoffset: 0;
     rotate: var(--line-rotation);
   }
 }
 
 @keyframes to-open-icon {
   0% {
+    stroke-dashoffset: 0;
+    rotate: var(--line-rotation);
+  }
+
+  40% {
+    stroke-dashoffset: 79.9;
+    rotate: var(--line-rotation);
+  }
+
+  60% {
     stroke-dashoffset: 79.9;
   }
 
   100% {
     stroke-dashoffset: 0;
   }
+}
+
+.btn-three {
+  --btn-clr: var(--clr-primary-900);
+  --btn-border-clr: var(--clr-primary-900);
+
+  --btn-hover-clr: var(--clr-primary-800);
+  --btn-hover-border-clr: var(--clr-primary-800);
+}
+
+.btn-three :where(svg, rect, line, path) {
+  fill: none;
+}
+
+.btn-three :where(path) {
+  stroke: var(--btn-clr);
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.btn-three:where(:hover) :where(path) {
+  stroke: var(--btn-hover-clr);
+}
+
+.btn-three .line {
+  stroke-dasharray: 60 20 40 1000;
 }
 
 /** Content - Layout **/
