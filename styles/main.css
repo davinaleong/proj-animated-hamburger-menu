@@ -385,6 +385,15 @@ a:where(:hover, :focus, :focus-visible) {
   --btn-hover-border-clr: var(--clr-primary-800);
 }
 
+.btn-three .hamburger {
+  transition: translate 1s, rotate 1s;
+}
+
+.btn-three:where(:hover) .hamburger {
+  translate: 10px -10px;
+  rotate: 0.125turn;
+}
+
 .btn-three :where(svg, rect, line, path) {
   fill: none;
 }
@@ -394,6 +403,7 @@ a:where(:hover, :focus, :focus-visible) {
   stroke-width: 10;
   stroke-linecap: round;
   stroke-linejoin: round;
+  overflow: hidden;
 }
 
 .btn-three:where(:hover) :where(path) {
@@ -401,7 +411,16 @@ a:where(:hover, :focus, :focus-visible) {
 }
 
 .btn-three .line {
-  stroke-dasharray: 60 20 40 1000;
+  transition: 1s;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 60 31 60 300;
+}
+
+.btn-three:where(:hover) .line {
+  stroke-dashoffset: -90;
+  stroke-dasharray: 60 105 60 300;
 }
 
 /** Content - Layout **/
