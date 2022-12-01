@@ -188,6 +188,7 @@ a:where(:hover, :focus, :focus-visible) {
   padding: var(--btn-padding);
   transition: all 0.3s ease-in-out;
   border-radius: var(--size-200);
+  text-decoration: none;
 }
 
 .btn :where(svg, path, line) {
@@ -249,27 +250,25 @@ a:where(:hover, :focus, :focus-visible) {
 }
 
 .btn-icon {
-  --btn-clr: var(--clr-primary-500);
-  --btn-bg-clr: var(--clr-primary-200);
-  --btn-border-clr: var(--clr-primary-200);
+  --btn-clr: var(--clr-primary-400);
+  --btn-bg-clr: var(--clr-primary-800);
+  --btn-border-clr: var(--clr-primary-800);
 
-  --btn-hover-clr: var(--clr-gray-50);
-  --btn-hover-bg-clr: var(--clr-primary-500);
-  --btn-hover-border-clr: var(--clr-primary-500);
-  --btn-padding: var(--size-300);
+  --btn-hover-clr: var(--clr-primary-400);
+  --btn-hover-bg-clr: var(--clr-primary-900);
+  --btn-hover-border-clr: var(--clr-primary-900);
+  --btn-padding: var(--size-200);
 
+  font-size: 3rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
+  box-shadow: 0.1rem 0.1rem 0.3rem 0 hsla(0, 0%, 0%, 0.5);
 }
 
-.btn-icon[data-inverted] {
-  --btn-clr: var(--clr-primary-200);
-  --btn-bg-clr: var(--clr-primary-400);
-  --btn-border-clr: var(--clr-primary-400);
-
-  --btn-hover-clr: var(--clr-primary-200);
-  --btn-hover-bg-clr: var(--clr-primary-400);
-  --btn-hover-border-clr: var(--clr-primary-400);
+.btn-fixed {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
 }
 
 .btn-transparent {
