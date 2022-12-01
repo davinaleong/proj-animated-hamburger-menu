@@ -2,7 +2,7 @@
 
 This demo was inspired by Kevin Powell's [Basic, Intermediate & Pro animated hamburger icons](https://www.youtube.com/watch?v=R00QiudbD4Y) video.
 
-Demo page is coming soon!
+Demo page is found [here](https://davinaleong.github.io/proj-animated-hamburger-menu/).
 
 ## Getting Started
 
