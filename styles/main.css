@@ -179,6 +179,7 @@ a:where(:hover, :focus, :focus-visible) {
   --btn-hover-opacity: 1;
 
   --btn-padding: var(--size-300) var(--size-600);
+  --btn-border-radius: var(--size-400);
   --btn-border-width: thin;
 
   display: inline-flex;
@@ -190,7 +191,7 @@ a:where(:hover, :focus, :focus-visible) {
   border: var(--btn-border-width) solid var(--btn-border-clr);
   padding: var(--btn-padding);
   transition: all 0.3s ease-in-out;
-  border-radius: var(--size-200);
+  border-radius: var(--btn-border-radius);
   text-decoration: none;
 }
 
@@ -288,6 +289,8 @@ a:where(:hover, :focus, :focus-visible) {
 
   --btn-hover-clr: var(--clr-primary-800);
   --btn-hover-border-clr: var(--clr-primary-800);
+
+  --btn-border-radius: var(--size-500);
 }
 
 .btn-one .line {
@@ -319,6 +322,8 @@ a:where(:hover, :focus, :focus-visible) {
 
   --btn-hover-clr: var(--clr-secondary-300);
   --btn-hover-border-clr: var(--clr-secondary-300);
+
+  --btn-border-radius: var(--size-500);
 }
 
 .btn-two :where(.hamburger) {
@@ -397,6 +402,7 @@ a:where(:hover, :focus, :focus-visible) {
 
   --btn-hover-clr: var(--clr-accent-300);
   --btn-hover-border-clr: var(--clr-accent-300);
+  --btn-border-radius: var(--size-500);
 }
 
 .btn-three .hamburger {
@@ -443,7 +449,7 @@ a:where(:hover, :focus, :focus-visible) {
   grid-template-columns: auto;
   grid-template-rows: repeat(3, 1fr);
   place-items: center;
-  gap: var(--size-400);
+  gap: var(--size-800);
 }
 
 @media (min-width: 48em) {
